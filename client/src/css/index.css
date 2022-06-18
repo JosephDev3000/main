@@ -1,0 +1,344 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@200;300;400;500;600;800;900&display=swap");
+
+:root{
+/* =========== main colors ================ */
+  --blackClr: #444444;
+  --lightGray: #f6f6f6;
+  --lightGray2: #f0f0f0;
+  --primaryClrBlue: #0339a5;
+  --primaryClrBlue2: #11689a;
+  --primaryClrBlue3: #0d6efd;
+
+}
+
+
+
+* {
+  font-family: "Inter", sans-serif;
+}
+body {
+  background-color: var(--lightGray);
+}
+.main-container {
+  min-height: 100%;
+  padding: 1% 0;
+
+}
+
+.login-container {
+  border-radius: 25px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: -5px 22px 20px 0px rgba(130, 130, 130, 0.75);
+  -webkit-box-shadow: -5px 22px 20px 0px rgba(130, 130, 130, 0.75);
+  -moz-box-shadow: -5px 22px 20px 0px rgba(130, 130, 130, 0.75);
+}
+.log-in-text {
+  font-weight: 700;
+  font-size: 38px;
+  color: var(--primaryClrBlue);
+}
+.login-access-text {
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--blackClr);
+}
+.email-input,
+.password-input {
+  width: 300px;
+}
+.hr-services-logo {
+  height: 40px;
+}
+.sign-in-with-container {
+  color: #fff;
+  background-color: var(--primaryClrBlue);
+  height: 125px;
+  /* border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px; */
+}
+form input[type="email"],
+form input[type="password"] {
+  border: none !important;
+  outline: none !important;
+  background-color: transparent;
+}
+.password-container,
+.email-container {
+  background-color: var(--lightGray2);
+  width: 380px;
+  height: 50px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+.container-additional-login {
+  width: 380px;
+}
+/* toggle */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 5px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--primaryClrBlue2);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--primaryClrBlue2);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(120px);
+  -ms-transform: translateX(8px);
+  transform: translateX(22px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.toggle-switch {
+  width: 380px;
+}
+.keep-me-text,
+.forgot-password-text {
+  font-size: 13px;
+}
+.forgot-password-container {
+  text-align: end;
+}
+.forgot-password-container,
+.toggle-switch {
+  width: 50%;
+}
+.sign-up-text {
+  font-size: 12px;
+  font-weight: 500;
+}
+.btn-login {
+  border: none;
+  background-image: linear-gradient(to right, #005e95, #5d94b3, #67d2fc);
+  border-radius: 25px;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+.btn-login:hover {
+  background-image: none;
+  background-color: var(--blackClr) !important;
+}
+.or-container {
+  background-color: var(--primaryClrBlue);
+  position: relative;
+}
+.or-container > div {
+  background-color: var(--primaryClrBlue);
+  min-width: 100%;
+  min-height: 20px;
+}
+.or-container > div:first-child {
+  background-color: white;
+}
+
+.or-text {
+  font-weight: 500;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 20px;
+  border: solid var(--primaryClrBlue);
+  position: absolute;
+  top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  font-size: 12px;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+}
+.sign-in-with-text {
+  font-size: 16px;
+  font-weight: 400;
+}
+.sign-in-logos {
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 7px;
+  border: 0;
+  outline: 0;
+  margin:0px 7px
+}
+.sign-in-logos:hover {
+  transform: scale(1.2);
+  transition: 0.35s ease-in-out;
+}
+.picture-container {
+  background-color: #f6f6f6;
+}
+.background-img {
+  width: 100%;
+}
+.social-media-icon {
+  /* style="color: #3a559f" */
+  width: 25px;
+  height: 25px;
+}
+
+#linkedin-icon {
+  color: #007ab9;
+}
+
+#facebook-icon {
+  color: #3a559f;
+}
+
+
+@media only screen and (max-width: 280px) {
+  .email-container {
+    width: 230px;
+  }
+  .email-input {
+    width: 80%;
+  }
+  .password-container {
+    width: 230px;
+  }
+  .password-input {
+    width: 80%;
+  }
+  .container-additional-login {
+    width: 250px;
+  }
+  .toggle-switch,
+  .forgot-password-container {
+    width: 100% !important;
+  }
+  .toggle-switch {
+    justify-content: center !important;
+  }
+  .forgot-password-container {
+    text-align: left;
+    text-align: center;
+  }
+  .hr-services-logo {
+    width: 200px;
+    height: 20px;
+  }
+  .background-img {
+    width: 270px;
+  }
+
+  .main-container > .row > .col-lg-5{
+    padding-bottom:50px;
+    background-color: red;
+  }
+   
+}
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+  .email-container {
+    width: 80%;
+  }
+  .email-input {
+    width: 80%;
+  }
+  .password-container {
+    width: 80%;
+  }
+  .password-input {
+    width: 80%;
+  }
+  .container-additional-login {
+    width: 250px;
+  }
+  .toggle-switch,
+  .forgot-password-container {
+    width: 100% !important;
+  }
+  .toggle-switch {
+    justify-content: center !important;
+  }
+  .forgot-password-container {
+    text-align: left;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 435px) and (min-width: 281px) {
+  .email-container {
+    width: 80%;
+  }
+  .email-input {
+    width: 80%;
+  }
+  .password-container {
+    width: 80%;
+  }
+  .password-input {
+    width: 80%;
+  }
+  .container-additional-login {
+    width: 250px;
+  }
+  .toggle-switch,
+  .forgot-password-container {
+    width: 100% !important;
+  }
+  .toggle-switch {
+    justify-content: center !important;
+  }
+  .forgot-password-container {
+    text-align: left;
+    text-align: center;
+  }
+  .background-img {
+    width: 95%;
+  }
+  .hr-services-logo {
+    width: 300px;
+    height: auto;
+  }
+}
